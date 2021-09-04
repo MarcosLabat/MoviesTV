@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Encode Sans SC", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFf;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #141414;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.header .logo {
+  font-family: "Bebas Neue", cursive;
+  color: #e50914;
+  padding: 1rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  .header .logo {
+    font-size: 5rem;
+  }
+}
+.header .navegacion {
+  display: flex;
+  align-items: center;
+}
+.header .navegacion a {
+  padding: 0 0.5rem;
+  color: #d1d1d1;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 700;
+  transition: color 0.5s ease;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+.header .navegacion a:hover {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .header .navegacion a {
+    font-size: 1.6rem;
+  }
+}
+.header .navegacion .activo {
+  color: #fff;
+  border: 2px solid #e5e5e5;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.contenedor-slider {
+  width: 95%;
+  height: 40vh;
+  margin: 0 auto;
+  position: relative;
+}
+.contenedor-slider .slider__btn {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 50%;
+  color: grey;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  transition: color 0.5s ease;
+  border-radius: 50%;
+}
+.contenedor-slider .slider__btn:hover {
+  color: #e50914;
+}
+@media (min-width: 768px) {
+  .contenedor-slider .slider__btn {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+.contenedor-slider .slider__btn--left {
+  left: 1.5rem;
+}
+.contenedor-slider .slider__btn--right {
+  right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-slider {
+    height: 90vh;
+  }
+}
+.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 1rem;
+  transition: all 0.5s linear;
+}
+.slider .titulo {
+  color: #fff;
+  background: rgba(229, 9, 20, 0.6);
+  display: inline-block;
+  padding: 1rem;
+  position: absolute;
+  bottom: 10%;
+  left: 0.5rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  border-radius: 3rem;
+}
+@media (min-width: 768px) {
+  .slider .titulo {
+    font-size: 4rem;
+  }
+}
+
+.carousel__contenedor {
+  position: relative;
+  height: 100%;
+}
+.carousel__contenedor .carousel__siguiente,
+.carousel__contenedor .carousel__anterior {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: calc(50% - 3rem);
+  line-height: 3rem;
+  text-align: center;
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: grey;
+  transition: color 0.5s ease;
+}
+.carousel__contenedor .carousel__siguiente:hover,
+.carousel__contenedor .carousel__anterior:hover {
+  color: #e50914;
+  opacity: 100%;
+}
+.carousel__contenedor .carousel__anterior {
+  left: -3rem;
+}
+.carousel__contenedor .carousel__siguiente {
+  right: -3rem;
+}
+
+main {
+  margin: 2rem 0;
+}
+main .pelis__popu {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #e50914;
+  font-family: "Bebas Neue", cursive;
+  margin: 3rem 0;
+}
+@media (min-width: 768px) {
+  main .pelis__popu {
+    font-size: 4rem;
+  }
+}
+
+.carousel__lista {
+  overflow: hidden;
+}
+
+.carousel__elemento {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.carousel__elemento img {
+  width: 100%;
+  height: 70%;
+  padding: 0 0.5rem;
+}
+.carousel__elemento p {
+  color: #fff;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  height: 15%;
+  margin-top: 1rem;
+}
+.carousel__elemento button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 3rem;
+  height: 0.4rem;
+  background-color: #fff;
+  opacity: 0.2;
+  border-radius: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+.carousel {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footer {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  border-top: 2px #000 solid;
+}
+.footer .logo {
+  color: #e50914;
+  font-family: "Bebas Neue", cursive;
+  font-size: 4.5rem;
+}
+.footer p {
+  color: #fff;
+}
+.footer p a {
+  color: #fff;
+}
+.footer .item__footer {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.contenedor__series {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 2rem;
+}
+.contenedor__series .serie {
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+}
+.contenedor__series .serie img {
+  border-radius: 0.5rem;
+  height: 70%;
+}
+.contenedor__series .serie p {
+  font-family: "Bebas Neue", cursive;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  height: 15%;
+}
+
+.boton-info {
+  background: transparent;
+  border: 2px solid #e50914;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor__series {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__series {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.contenedor__boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.contenedor__boton .boton__vermas {
+  border: none;
+  width: 25rem;
+  height: 3rem;
+  background-color: #f3f3f3;
+  color: #000;
+  font-weight: 700;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease;
+}
+.contenedor__boton .boton__vermas:hover {
+  opacity: 50%;
+}
+
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: inline-block;
+}
+
+.contenedor__peliculas,
+.contenedor__peliculas--espana,
+.contenedor__peliculas--eeuu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 2rem;
+}
+.contenedor__peliculas .pelicula,
+.contenedor__peliculas--espana .pelicula,
+.contenedor__peliculas--eeuu .pelicula {
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+}
+.contenedor__peliculas .pelicula img,
+.contenedor__peliculas--espana .pelicula img,
+.contenedor__peliculas--eeuu .pelicula img {
+  border-radius: 0.5rem;
+  height: 70%;
+}
+.contenedor__peliculas .pelicula p,
+.contenedor__peliculas--espana .pelicula p,
+.contenedor__peliculas--eeuu .pelicula p {
+  font-family: "Bebas Neue", cursive;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  height: 15%;
+}
+
+main .celeste {
+  color: #10bcf5;
+}
+main .blanco {
+  color: #fff;
+}
+main .rojo {
+  color: #ad1519;
+}
+main .amarrillo {
+  color: #fabd00;
+}
+main .azul {
+  color: #0916af;
+}
+main .rojo-eeuu {
+  color: #f82538;
+}
+
+@media (min-width: 768px) {
+  .contenedor__peliculas,
+.contenedor__peliculas--espana,
+.contenedor__peliculas--eeuu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__peliculas,
+.contenedor__peliculas--espana,
+.contenedor__peliculas--eeuu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+.contenedor__imagen {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 1.5rem;
+}
+.contenedor__imagen .imagen {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor__imagen {
+    height: 90vh;
+  }
+}
+.contenedor__info {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor__info .info__img {
+  width: 80%;
+  height: 100%;
+}
+.contenedor__info .info__img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .contenedor__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+  .contenedor__info .info__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.info__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+  color: #FFF;
+}
+.info__texto .info__nombre {
+  color: #e50914;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+}
+.info__texto .info__desc {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+.info__texto span {
+  font-weight: 700;
+}
+
+.info__generos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.info__generos h3 {
+  font-weight: 400;
+}
+.info__generos h4 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .info__texto .info__desc {
+    text-align: start;
+  }
+}
+.info__trailers {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+}
+.info__trailers div {
+  width: 100%;
+  height: 100%;
+}
+.info__trailers .video {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .info__trailers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(Auto-fit 2, 1fr);
+    grid-auto-flow: dense;
+  }
+}
+.loader {
+  margin: 100px auto;
+  font-size: 25px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load5 1.1s infinite ease;
+  animation: load5 1.1s infinite ease;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+@-webkit-keyframes load5 {
+  0%, 100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+@keyframes load5 {
+  0%, 100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>Detalles</title>
+</head>
+<body>
+    <header class="header fijo">
+        <div>
+            <a href="index.html"><h2 class="logo">MoviesTV</h2></a>
+        </div>
+        <nav class="navegacion">
+            <a href="index.html" class="items__principal">Inicio</a>
+            <a href="peliculas.html" class="items__principal">Películas</a>
+            <a href="series.html" class="items__principal">Series</a>
+        </nav>
+    </header>
+    
+    <div class="loader" id="spinner">Loading...</div>
+    <main class="mostrar ocultar">
+        <section class="contenedor__imagen " id="cont_img">
+            <div class="imagen" id="img"></div>
+        </section>
+        <div class="contenedor__info">
+            <div class="info__img"></div>
+            <div class="info__texto"></div>
+        </div>
+        <section id="trailers"></section>
+    </main>
+    <footer class="footer">
+        <div>
+            <h2 class="logo">MoviesTV</h2>
+        </div>
+        <p>Datos obtenidos de: <a href="https://www.themoviedb.org/" target="_Blank">TMDB</a></p>
+        <nav class="navegacion__footer">
+            <a href="index.html" class="item__footer">Inicio</a>
+            <a href="peliculas.html" class="item__footer">Películas</a>
+            <a href="series.html" class="item__footer activo">Series</a>
+        </nav>
+    </footer>
+    <script src="build/js/infoo.js" type="module"></script>
+</body>
+</html>

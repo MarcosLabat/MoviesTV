@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>Peliculas</title>
+</head>
+<body>
+    <header class="header fijo">
+        <div>
+            <a href="index.html"><h2 class="logo">MoviesTV</h2></a>
+        </div>
+        <nav class="navegacion">
+            <a href="index.html" class="items__principal">Inicio</a>
+            <a href="peliculas.html" class="items__principal activo">Películas</a>
+            <a href="series.html" class="items__principal">Series</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h4 class="pelis__popu">Peliculas Más Populares en <span class="celeste">Arg</span><span class="blanco">ent</span><span class="celeste">ina</span></h4>
+        <section class="contenedor__peliculas"></section>
+        <h4 class="pelis__popu">Peliculas Más Populares en <span class="rojo">Es</span><span class="amarrillo">pa</span><span class="rojo">ña</span></h4>
+        <section class="contenedor__peliculas--espana"></section>
+        <h4 class="pelis__popu">Peliculas Más Populares en <span class="rojo-eeuu">Esta</span><span class="blanco">dos</span><span class="azul">Unidos</span></h4>
+        <section class="contenedor__peliculas--eeuu"></section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h2 class="logo">MoviesTV</h2>
+        </div>
+        <p>Datos obtenidos de: <a href="https://www.themoviedb.org/" target="_Blank">TMDB</a></p>
+        <nav class="navegacion__footer">
+            <a href="index.html" class="item__footer">Inicio</a>
+            <a href="peliculas.html" class="item__footer activo">Películas</a>
+            <a href="series.html" class="item__footer">Series</a>
+        </nav>
+    </footer>
+    <script src="build/js/peliculas.js" type="module"></script>
+</body>
+</html>

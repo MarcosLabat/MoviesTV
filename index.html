@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿No sabes que ver? Aquí vas a encontrar las películas y series con mejor recomendación y con toda su información."></meta>
+    <meta name="theme-color" content="#141414">
+    <meta property="og:title" content="MoviesTV">
+    <meta property="og:description" content="¿No sabes que ver? Aquí vas a encontrar las películas y series con mejor recomendación y con toda su información.">
+    <meta property="og:url" content="https://www.moviestv.netlify.app">
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>MoviesTV</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h2 class="logo">MoviesTV</h2>
+        </div>
+        <nav class="navegacion">
+            <a href="index.html" class="items__principal activo">Inicio</a>
+            <a href="peliculas.html" class="items__principal">Películas</a>
+            <a href="series.html" class="items__principal">Series</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-slider">
+        <button class="slider__btn slider__btn--right" id="right">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        <button class="slider__btn slider__btn--left" id="left">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>    
+        <div class="slider" id="slider"></div>
+    </div>
+   
+        <main>
+            <h4 class="pelis__popu">peliculas Populares</h4>
+
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <div class="carousel__lista"></div>
+                </div>
+    
+                <div class="carousel__indicadores" role="tablist"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div>
+                <h2 class="logo">MoviesTV</h2>
+            </div>
+            <p>Datos obtenidos de: <a href="https://www.themoviedb.org/" target="_Blank">TMDB</a></p>
+            <nav class="navegacion__footer">
+                <a href="index.html" class="item__footer activo">Inicio</a>
+                <a href="peliculas.html" class="item__footer">Películas</a>
+                <a href="series.html" class="item__footer">Series</a>
+            </nav>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="build/js/app.js" type="module"></script>
+</body>
+</html>
