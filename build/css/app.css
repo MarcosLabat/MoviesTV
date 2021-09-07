@@ -166,37 +166,6 @@ body {
   }
 }
 
-.carousel__contenedor {
-  position: relative;
-  height: 100%;
-}
-.carousel__contenedor .carousel__siguiente,
-.carousel__contenedor .carousel__anterior {
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  top: calc(50% - 3rem);
-  line-height: 3rem;
-  text-align: center;
-  display: block;
-  border: none;
-  cursor: pointer;
-  background: none;
-  color: grey;
-  transition: color 0.5s ease;
-}
-.carousel__contenedor .carousel__siguiente:hover,
-.carousel__contenedor .carousel__anterior:hover {
-  color: #e50914;
-  opacity: 100%;
-}
-.carousel__contenedor .carousel__anterior {
-  left: -3rem;
-}
-.carousel__contenedor .carousel__siguiente {
-  right: -3rem;
-}
-
 main {
   margin: 2rem 0;
 }
@@ -205,7 +174,7 @@ main .pelis__popu {
   font-size: 2.5rem;
   color: #e50914;
   font-family: "Bebas Neue", cursive;
-  margin: 3rem 0;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   main .pelis__popu {
@@ -231,7 +200,7 @@ main .pelis__popu {
   color: #fff;
   font-family: "Bebas Neue", cursive;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   height: 15%;
   margin-top: 1rem;
 }
@@ -239,10 +208,20 @@ main .pelis__popu {
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
+  font-size: 1.3rem;
 }
 
+@media (min-width: 1200px) {
+  .carousel__elemento p {
+    font-size: 3rem;
+  }
+  .carousel__elemento button {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+}
 .carousel__indicadores .glider-dot {
   display: block;
   width: 3rem;
@@ -345,28 +324,6 @@ main .pelis__popu {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.contenedor__boton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2.5rem;
-}
-.contenedor__boton .boton__vermas {
-  border: none;
-  width: 25rem;
-  height: 3rem;
-  background-color: #f3f3f3;
-  color: #000;
-  font-weight: 700;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: opacity 0.5s ease;
-}
-.contenedor__boton .boton__vermas:hover {
-  opacity: 50%;
-}
-
 .ocultar {
   display: none;
 }
@@ -375,31 +332,23 @@ main .pelis__popu {
   display: inline-block;
 }
 
-.contenedor__peliculas,
-.contenedor__peliculas--espana,
-.contenedor__peliculas--eeuu {
+.contenedor__peliculas {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   text-align: center;
   gap: 2rem;
 }
-.contenedor__peliculas .pelicula,
-.contenedor__peliculas--espana .pelicula,
-.contenedor__peliculas--eeuu .pelicula {
+.contenedor__peliculas .pelicula {
   width: 100%;
   height: 100%;
   margin: 2rem 0;
 }
-.contenedor__peliculas .pelicula img,
-.contenedor__peliculas--espana .pelicula img,
-.contenedor__peliculas--eeuu .pelicula img {
+.contenedor__peliculas .pelicula img {
   border-radius: 0.5rem;
   height: 70%;
 }
-.contenedor__peliculas .pelicula p,
-.contenedor__peliculas--espana .pelicula p,
-.contenedor__peliculas--eeuu .pelicula p {
+.contenedor__peliculas .pelicula p {
   font-family: "Bebas Neue", cursive;
   color: #fff;
   font-size: 3rem;
@@ -409,47 +358,31 @@ main .pelis__popu {
   height: 15%;
 }
 
-main .celeste {
-  color: #10bcf5;
-}
-main .blanco {
+.numeracion {
+  display: flex;
   color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
 }
-main .rojo {
-  color: #ad1519;
-}
-main .amarrillo {
-  color: #fabd00;
-}
-main .azul {
-  color: #0916af;
-}
-main .rojo-eeuu {
-  color: #f82538;
+
+.actual {
+  font-size: 2rem;
+  color: #e50914;
 }
 
 @media (min-width: 768px) {
-  .contenedor__peliculas,
-.contenedor__peliculas--espana,
-.contenedor__peliculas--eeuu {
+  .contenedor__peliculas {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1200px) {
-  .contenedor__peliculas,
-.contenedor__peliculas--espana,
-.contenedor__peliculas--eeuu {
+  .contenedor__peliculas {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.ocultar {
-  display: none;
-}
-
-.mostrar {
-  display: block;
-}
-
 .contenedor__imagen {
   width: 100%;
   height: 50vh;

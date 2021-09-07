@@ -1,6 +1,5 @@
 export const mostrarPopus = async (data, cont, clase, nombre,identificador) => {
     const contenedor = await document.querySelector(cont);
-    const hijos = await contenedor.children
     const datos = await nombre
     const datosId = await identificador
     const path = location.pathname
@@ -29,30 +28,8 @@ export const mostrarPopus = async (data, cont, clase, nombre,identificador) => {
         div.appendChild(boton)
 
         contenedor.appendChild(div)
-        if(hijos.length > 20){
-            div.classList.add('ocultar')
-            div.setAttribute('id', 'contenido-oculto');
-        }
         }
     });
-    if(hijos.length > 21){
-        mostrarMasContenido();
-    }
-}
-
-const mostrarMasContenido = () => {
-    const oculto = document.querySelectorAll('#contenido-oculto');
-    const botonVerMas = document.querySelector('#boton-vermas');
-    botonVerMas.addEventListener('click', () => {
-        oculto.forEach(peli => {
-            if(peli.classList.contains('ocultar')){
-                peli.classList.remove('ocultar');
-                peli.classList.add('mostrar');
-                botonVerMas.remove();
-            }
-        })
-       
-    })
 }
 
 export const infoPelis = async (url) => {
@@ -66,7 +43,7 @@ export const infoPelis = async (url) => {
 }
 
 const mostrarInfo = async (data) => {
-     const {backdrop_path, poster_path, name, overview, first_air_date,genres,number_of_seasons, number_of_episodes,origin_country,vote_average,vote_count,release_date,title} = data;
+    const {backdrop_path, poster_path, name, overview, first_air_date,genres,number_of_seasons, number_of_episodes,origin_country,vote_average,vote_count,release_date,title} = data;
     const {results} = data.videos;
     const contenedorImg = document.querySelector('#img');
     const infoImg = document.querySelector('.info__img');
@@ -157,6 +134,25 @@ const mostrarInfo = async (data) => {
     infoTxt.appendChild(fragmento)
     trailer.appendChild(divTrailer)
     sacarLoad();
+}
+
+export const crearNumeracion = (contene) => {
+    const conte  = document.querySelector(contene);
+    const contenedorNum = document.createElement('DIV');
+    contenedorNum.classList.add('numeracion');
+    for(let i = 1; i <= 10; i++){
+        const num = document.createElement('P');
+        if(i == 1)num.classList.add('actual')
+        num.textContent = i;
+        num.dataset.page = i;
+        contenedorNum.appendChild(num)
+    }
+    conte.appendChild(contenedorNum)
+}
+
+export const limpiarHTML = (cont) => {
+    const contenedor = document.querySelector(cont)
+    while(contenedor.firstChild) contenedor.removeChild(contenedor.firstChild)
 }
 
 const sacarLoad = () => {
